@@ -28,16 +28,11 @@ const Wrapper = styled.div`
   height: ${({ full }) => (full ? "100vh" : "auto")};
 `
 
-const STitle = styled(Title)`
-  color: ${colors.test};
-`
-
-
 const getColumnNode = props => {
   if (props.columnNode) {
     return props.columnNode
   }
-  return <STitle level={2}>{props.title || ""}</STitle>
+  return <Title level={2}>{props.title || ""}</Title>
 }
 
 const Section = ({ children, even, ...props }) => (

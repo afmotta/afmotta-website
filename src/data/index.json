@@ -7,7 +7,7 @@
   },
   "summary": "I'm a passionate software developer with an aptitude for leadership. I have a solid experience in designing and developing products as well as leading teams towards the accomplishment of the mission.",
   "experties": [],
-  "skills": ["leadership", "fast-learning"],
+  "skills": [{ "title": "leadership" }, { "title": "fast-learning" }],
   "techs": ["javascript", "python", "react", "redux"],
   "experience": [],
   "education": [],

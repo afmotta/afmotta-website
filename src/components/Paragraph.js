@@ -1,9 +1,9 @@
-import styled from 'styled-components'
-import { darken } from 'polished'
-import colors from '../theme/colors'
+import styled from "styled-components"
+import { darken } from "polished"
+import colors from "../theme/colors"
 
 export default styled.p`
   color: ${darken(0.2, colors.text)};
-  line-height: 1.75;
+  line-height: 1.75;ß
   margin: 0;
 `

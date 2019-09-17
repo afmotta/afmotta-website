@@ -4,12 +4,10 @@ import { createGlobalStyle } from "styled-components"
 import Contacts from "../components/Contacts"
 import Education from "../components/Education"
 import Experience from "../components/Experience"
-import Experties from "../components/Experties"
 import Intro from "../components/Intro"
 import Profiles from "../components/Profiles"
-import Skills from "../components/Skills"
+import GridSection from "../components/GridSection"
 import Summary from "../components/Summary"
-import Technologies from "../components/Technologies"
 import WithEven from "../components/WithEven"
 import colors from "../theme/colors"
 
@@ -35,9 +33,9 @@ export default ({ data }) => (
         role={data.dataJson.general.role}
       />
       <Summary summary={data.dataJson.summary} />
-      <Experties items={data.dataJson.experties} />
-      <Skills items={data.dataJson.skills} />
-      <Technologies items={data.dataJson.techs} />
+      <GridSection title="Experties" items={[1, 2, 3]} />
+      <GridSection title="Skills" items={data.dataJson.skills} />
+      <GridSection title="Technologies" items={[1, 2, 3]} />
       <Experience items={[1, 2, 3]} />
       <Education items={[0, 0, 0]} />
       <Profiles
@@ -51,7 +49,9 @@ export default ({ data }) => (
 export const query = graphql`
   query {
     dataJson {
-      skills
+      skills {
+        title
+      }
       summary
       techs
       general {

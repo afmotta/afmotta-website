@@ -23,40 +23,7 @@ const GridItem = ({ title, text }) => (
   </Item>
 )
 
-const items = [
-  {
-    title: "LEADERSHIP",
-    text:
-      "Cras ornare tristique elit lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id.",
-  },
-  {
-    title: "FRONT-END DESIGN",
-    text:
-      "Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna. Ut aliquam sollicitudin leo.",
-  },
-  {
-    title: "REACT",
-    text:
-      "Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna. Ut aliquam sollicitudin leo.",
-  },
-  {
-    title: "JAVASCRIPT",
-    text:
-      "Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna. Ut aliquam sollicitudin leo.",
-  },
-  {
-    title: "PYTHON",
-    text:
-      "Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna. Ut aliquam sollicitudin leo.",
-  },
-  {
-    title: "JAVASCRIPT",
-    text:
-      "Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna. Ut aliquam sollicitudin leo.",
-  },
-]
-
-const Grid = props => (
+const Grid = ({ items, ...props }) => (
   <Wrapper>
     {items.map(item => (
       <GridItem {...item} />

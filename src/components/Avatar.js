@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Jpeg from "../assets/avatar.jpeg"
+import Jpeg from "../../static/avatar.jpeg"
 
 const Img = styled.img`
   border-radius: 50%;

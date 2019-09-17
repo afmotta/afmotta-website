@@ -4,7 +4,9 @@ import Paragraph from "./Paragraph"
 import Small from "./Small"
 import Title from "./Title"
 import colors from "../theme/colors"
-import { getBgColor } from "../theme/utils"
+
+const getBgColor = (isColumn, isEven) =>
+  colors.background[isColumn ? "column" : "main"][isEven ? "even" : "odd"]
 
 const Wrapper = styled.div`
   border-color: #404242;
