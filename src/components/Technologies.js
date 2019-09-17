@@ -1,10 +1,9 @@
 import React from "react"
-import styled from "styled-components"
-import Grid from '../components/Grid'
-import Section from "../components/Section"
+import Grid from './Grid'
+import Section from "./Section"
 
-export default () => (
-  <Section title="Technologies">
+export default props => (
+  <Section title="Technologies" {...props}>
     <Grid />
   </Section>
 )

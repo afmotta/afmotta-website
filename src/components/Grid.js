@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import Heading from "./Heading"
 import Paragraph from "./Paragraph"
 import Title from "./Title"
 

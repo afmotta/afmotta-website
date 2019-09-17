@@ -1,13 +1,23 @@
 import React from "react"
 import styled from "styled-components"
-import Heading from "../components/Heading"
-import Section from "../components/Section"
+import Avatar from "./Avatar"
+import Heading from "./Heading"
+import Section from "./Section"
 import colors from "../theme/colors"
 
 const Wrapper = styled.div`
-  height: 100%;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  padding-bottom: 2.7125rem;
+`
+
+const AvatarWrapper = styled.div`
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   justify-content: center;
   padding-bottom: 2.7125rem;
 `
@@ -30,7 +40,14 @@ const Role = styled(Heading)`
 `
 
 export default ({ firstName, lastName, role }) => (
-  <Section full columnNode={"IO"}>
+  <Section
+    full
+    columnNode={
+      <AvatarWrapper>
+        <Avatar />
+      </AvatarWrapper>
+    }
+  >
     <Wrapper>
       <div>
         <Heading level={1}>

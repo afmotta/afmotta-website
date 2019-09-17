@@ -1,8 +1,27 @@
 {
-  "title": "Alberto Francesco Motta Website",
-  "firstName": "Alberto Francesco",
-  "lastName": "Motta",
-  "role": "Lead Software Developer",
+  "general": {
+    "title": "Alberto Francesco Motta Website",
+    "firstName": "Alberto Francesco",
+    "lastName": "Motta",
+    "role": "Lead Software Developer"
+  },
+  "summary": "I'm a passionate software developer with an aptitude for leadership. I have a solid experience in designing and developing products as well as leading teams towards the accomplishment of the mission.",
+  "experties": [],
+  "skills": ["leadership", "fast-learning"],
   "techs": ["javascript", "python", "react", "redux"],
-  "skills": ["leadership", "fast-learning"]
+  "experience": [],
+  "education": [],
+  "profiles": [
+    {
+      "src": "https://www.linkedin.com/in/albertofrancescomotta/",
+      "title": "Linkedin",
+      "icon": "Linkedin"
+    },
+    {
+      "src": "https://github.com/afmotta",
+      "title": "Github",
+      "icon": "Github"
+    },
+    { "src": "https://gitlab.com/afmotta", "title": "Gitlab", "icon": "Gitlab" }
+  ]
 }
