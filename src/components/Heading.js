@@ -1,6 +1,5 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import colors from "../theme/colors"
 
 const fontSizes = {
   1: 70,
@@ -22,7 +21,7 @@ const fontSizeCss = ({ level }) => {
 const headingStyles = css`
   ${fontSizeCss};
   margin: 0;
-  color: ${colors.text};
+  color: ${({ theme }) => theme.colors.text};
 `
 
 const Heading = styled(({ level, children, ...props }) =>

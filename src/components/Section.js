@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import Title from "./Title"
-import colors from "../theme/colors"
+import { getBgColor } from "../theme/utils"
 
 const padding = "padding: 4.375rem 5.25rem 3.375rem;"
 const Main = styled.div`
-  background: ${({ even }) => colors.background.main[even ? "even" : "odd"]};
+  background: ${({ even, theme }) => getBgColor(theme.colors, false, even)};
   flex: 70%;
   ${padding}
 `
@@ -16,7 +16,7 @@ const MainWrapper = styled.div`
 `
 
 const Column = styled.div`
-  background: ${({ even }) => colors.background.column[even ? "even" : "odd"]};
+  background: ${({ even, theme }) => getBgColor(theme.colors, true, even)};
   flex: 30%;
   text-align: right;
   ${padding}

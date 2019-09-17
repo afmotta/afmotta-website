@@ -3,7 +3,6 @@ import styled from "styled-components"
 import Avatar from "./Avatar"
 import Heading from "./Heading"
 import Section from "./Section"
-import colors from "../theme/colors"
 
 const Wrapper = styled.div`
   display: flex;
@@ -31,7 +30,7 @@ const FirstName = styled.div`
 const LastName = styled.div`
   text-transform: uppercase;
   font-weight: 700;
-  color: ${colors.brand};
+  color: ${({ theme }) => theme.colors.brand};
 `
 
 const Role = styled(Heading)`

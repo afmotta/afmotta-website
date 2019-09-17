@@ -1,18 +1,20 @@
-import { darken } from 'polished'
+import { darken } from "polished"
 
-const bg = '#2b2c2c'
-
-export default {
-  text: '#a4a5a6',
-  brand: '#2ca24c',
+export default ({
+  text = "#a4a5a6",
+  brand = "#2ca24c",
+  background = "#2b2c2c",
+} = {}) => ({
+  text,
+  brand,
   background: {
     main: {
-      even: darken(0.01, bg),
-      odd: bg,
+      even: darken(0.01, background),
+      odd: background,
     },
     column: {
-      even: darken(0.021, bg),
-      odd: darken(0.015, bg),
-    }
-  }
-}
+      even: darken(0.021, background),
+      odd: darken(0.015, background),
+    },
+  },
+})

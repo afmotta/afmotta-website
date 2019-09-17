@@ -3,10 +3,7 @@ import styled from "styled-components"
 import Paragraph from "./Paragraph"
 import Small from "./Small"
 import Title from "./Title"
-import colors from "../theme/colors"
-
-const getBgColor = (isColumn, isEven) =>
-  colors.background[isColumn ? "column" : "main"][isEven ? "even" : "odd"]
+import { getBgColor } from "../theme/utils"
 
 const Wrapper = styled.div`
   border-color: #404242;
@@ -35,8 +32,9 @@ const Description = styled.div`
 `
 
 const Point = styled.div`
-  box-shadow: 0 0 0 6px ${({ even }) => getBgColor(false, even)};
-  background: ${colors.brand};
+  box-shadow: 0 0 0 6px
+    ${({ even, theme }) => getBgColor(theme.colors, false, even)};
+  background: ${({ theme }) => theme.colors.brand};
   height: 10px;
   width: 10px;
   position: absolute;

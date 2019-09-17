@@ -1,15 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle, ThemeProvider } from "styled-components"
 import Contacts from "../components/Contacts"
-import Education from "../components/Education"
-import Experience from "../components/Experience"
+import TimelineSection from "../components/TimelineSection"
 import Intro from "../components/Intro"
 import Profiles from "../components/Profiles"
 import GridSection from "../components/GridSection"
 import Summary from "../components/Summary"
 import WithEven from "../components/WithEven"
-import colors from "../theme/colors"
+import getTheme from "../theme"
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -19,32 +18,47 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    background-color: ${colors.background.main.even}
   }
 `
 
-export default ({ data }) => (
-  <React.Fragment>
-    <GlobalStyle />
-    <WithEven>
-      <Intro
-        firstName={data.dataJson.general.firstName}
-        lastName={data.dataJson.general.lastName}
-        role={data.dataJson.general.role}
-      />
-      <Summary summary={data.dataJson.summary} />
-      <GridSection title="Experties" items={[1, 2, 3]} />
-      <GridSection title="Skills" items={data.dataJson.skills} />
-      <GridSection title="Technologies" items={[1, 2, 3]} />
-      <Experience items={[1, 2, 3]} />
-      <Education items={[0, 0, 0]} />
-      <Profiles
-        items={data.dataJson.profiles}
-      />
-      <Contacts />
-    </WithEven>
-  </React.Fragment>
-)
+export default ({ data }) => {
+  const {
+    colors,
+    general,
+    experties,
+    summary,
+    skills,
+    profiles,
+  } = data.dataJson
+  return (
+    <React.Fragment>
+      <GlobalStyle />
+      <ThemeProvider
+        theme={getTheme({
+          text: colors.text,
+          brand: colors.brand,
+          background: colors.background,
+        })}
+      >
+        <WithEven>
+          <Intro
+            firstName={general.firstName}
+            lastName={general.lastName}
+            role={general.role}
+          />
+          <Summary summary={summary} />
+          <GridSection title="Experties" items={experties} />
+          <GridSection title="Skills" items={skills} />
+          <GridSection title="Technologies" items={[1, 2, 3]} />
+          <Experience items={[1, 2, 3]} />
+          <Education items={[0, 0, 0]} />
+          <Profiles items={profiles} />
+          <Contacts mail={general.mail} />
+        </WithEven>
+      </ThemeProvider>
+    </React.Fragment>
+  )
+}
 
 export const query = graphql`
   query {
@@ -59,11 +73,21 @@ export const query = graphql`
         firstName
         lastName
         role
+        mail
       }
       profiles {
         src
         title
         icon
+      }
+      colors {
+        background
+        text
+        brand
+      }
+      experties {
+        title
+        text
       }
     }
   }

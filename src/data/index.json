@@ -3,11 +3,23 @@
     "title": "Alberto Francesco Motta Website",
     "firstName": "Alberto Francesco",
     "lastName": "Motta",
-    "role": "Lead Software Developer"
+    "role": "Lead Software Developer",
+    "mail": "alberto.motta.86@gmail.com"
+  },
+  "colors": {
+    "text": "#a4a5a6",
+    "brand": "#2ca241",
+    "background": "#2b2c2c"
   },
   "summary": "I'm a passionate software developer with an aptitude for leadership. I have a solid experience in designing and developing products as well as leading teams towards the accomplishment of the mission.",
-  "experties": [],
-  "skills": [{ "title": "leadership" }, { "title": "fast-learning" }],
+  "experties": [{ "title": "leadership", "text": "Lorem ipsum" }],
+  "skills": [
+    { "title": "Agile software development" },
+    { "title": "software architecture" },
+    { "title": "cloud computing" },
+    { "title": "strong communication" },
+    { "title": "fast-learning" }
+  ],
   "techs": ["javascript", "python", "react", "redux"],
   "experience": [],
   "education": [],
