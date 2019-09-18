@@ -12,7 +12,10 @@
     "background": "#2b2c2c"
   },
   "summary": "I'm a passionate software developer with an aptitude for leadership. I have a solid experience in designing and developing products as well as leading teams towards the accomplishment of the mission.",
-  "experties": [{ "title": "leadership", "text": "Lorem ipsum" }],
+  "experties": [
+    { "title": "leadership", "text": "Lorem ipsum" },
+    { "title": "software development", "text": "Lorem ipsum" }
+  ],
   "skills": [
     { "title": "Agile software development" },
     { "title": "software architecture" },
@@ -20,9 +23,82 @@
     { "title": "strong communication" },
     { "title": "fast-learning" }
   ],
-  "techs": ["javascript", "python", "react", "redux"],
-  "experience": [],
-  "education": [],
+  "techs": [
+    { "title": "languages", "text": "Javascript, python, html, CSS, SQL" },
+    {
+      "title": "frontend",
+      "text": "React, Redux, Redux-saga, Styled-components, Angular"
+    },
+    { "title": "backend", "text": "Node.js, Django, Flask" },
+    { "title": "databases", "text": "PostgreSQL, Firestore, MongoDB" }
+  ],
+  "experience": [
+    {
+      "period": "2018 - present",
+      "company": "Eidoo",
+      "title": "Lead software developer",
+      "location": "Chiasso (CH)",
+      "text": "As lead developer, I was responsible for both technical decisions and project management, leading a team of twelve developers and one designer. As the first hire of the tech team, I was tasked with the hiring of all other team members and leading them. I was also tasked with translating the stakeholders desiderata into projects, by planning product development and timelines."
+    },
+    {
+      "period": "2017 - 2018",
+      "company": "Cloudacademy Inc.",
+      "title": "Frontend Lead developer",
+      "location": "Mendrisio (CH)",
+      "text": "As frontend lead developer, I was responsible for leading a team of five developers and two designers, with both project management and technical leadership. I was also responsible for the team hiring process. I designed and executed the migration of the frontend application from Knockout to React, with Redux and Redux Saga for state management."
+    },
+    {
+      "period": "2016 - 2017",
+      "company": "iGenius ICT",
+      "title": "Fullstack developer",
+      "location": "Milano (IT)",
+      "text": "As a fullstack developer I was tasked with building the company main product, Crystal, working both on the frontend and the backend. I've also managed the migration of the product from GCE to AWS."
+    },
+    {
+      "period": "2015 - 2016",
+      "company": "Thux",
+      "title": "Junior fullstack developer",
+      "location": "Milano (IT)",
+      "text": "At Thux I was developing various products for clients, using Python, Django and VueJs"
+    },
+    {
+      "period": "2011 - 2014",
+      "company": "Diaferio & Biondi",
+      "title": "Legal trainee",
+      "location": "Milano (IT)",
+      "text": "Draft and review of contracts and corporate documents, support in extraordinary corporate transaction, support in bankruptcy proceedings."
+    },
+    {
+      "period": "2009 - 2011",
+      "company": "Gerli law firm",
+      "title": "Legal intern",
+      "location": "Milano (IT)",
+      "text": "Draft of legal documents in the fields of commercial and civil law."
+    }
+  ],
+  "education": [
+    {
+      "period": "2014 - 2015",
+      "company": "Politecnico di Milano",
+      "title": "Samsung app academy",
+      "location": "Milano (IT)",
+      "text": ""
+    },
+    {
+      "period": "2005 - 2011",
+      "company": "Università Cattolica del Sacro Cuore",
+      "title": "Laurea magistrale in Giurisprudenza",
+      "location": "Milano (IT)",
+      "text": ""
+    },
+    {
+      "period": "1999 - 2005",
+      "company": "Istituto Sacro Cuore ",
+      "title": "Maturità scientifica",
+      "location": "Milano (IT)",
+      "text": ""
+    }
+  ],
   "profiles": [
     {
       "src": "https://www.linkedin.com/in/albertofrancescomotta/",

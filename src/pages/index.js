@@ -24,11 +24,14 @@ const GlobalStyle = createGlobalStyle`
 export default ({ data }) => {
   const {
     colors,
-    general,
+    education,
+    experience,
     experties,
-    summary,
-    skills,
+    general,
     profiles,
+    skills,
+    summary,
+    techs,
   } = data.dataJson
   return (
     <React.Fragment>
@@ -49,9 +52,9 @@ export default ({ data }) => {
           <Summary summary={summary} />
           <GridSection title="Experties" items={experties} />
           <GridSection title="Skills" items={skills} />
-          <GridSection title="Technologies" items={[1, 2, 3]} />
-          <Experience items={[1, 2, 3]} />
-          <Education items={[0, 0, 0]} />
+          <GridSection title="Technologies" items={techs} />
+          <TimelineSection title="Experience" items={experience} />
+          <TimelineSection title="Education" items={education} />
           <Profiles items={profiles} />
           <Contacts mail={general.mail} />
         </WithEven>
@@ -63,11 +66,11 @@ export default ({ data }) => {
 export const query = graphql`
   query {
     dataJson {
-      skills {
+      summary
+      techs {
+        text
         title
       }
-      summary
-      techs
       general {
         title
         firstName
@@ -80,14 +83,31 @@ export const query = graphql`
         title
         icon
       }
+      skills {
+        title
+      }
       colors {
         background
         text
         brand
       }
       experties {
-        title
         text
+        title
+      }
+      education {
+        company
+        location
+        text
+        title
+        period
+      }
+      experience {
+        location
+        company
+        period
+        text
+        title
       }
     }
   }

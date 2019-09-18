@@ -23,12 +23,16 @@ const TimelineItem = styled.div`
 `
 
 const Info = styled.div`
-  flex: 41, 66%;
+  flex: 15%;
   margin-right: 3.5rem;
 `
 
+const Role = styled(Paragraph)`
+  color: ${({ theme }) => theme.colors.text};
+`
+
 const Description = styled.div`
-  flex: 58, 33%;
+  flex: 50%;
 `
 
 const Point = styled.div`
@@ -48,13 +52,13 @@ export default ({ even, items, ...props }) => (
     {items.map(item => (
       <TimelineItem {...item}>
         <Info>
-          <Small>2018 - present</Small>
-          <Title>Eidoo</Title>
-          <Paragraph>Lead software developer</Paragraph>
-          <Small>Chiasso (CH)</Small>
+          <Small>{item.period}</Small>
+          <Title>{item.company}</Title>
+          <Role>{item.title}</Role>
+          <Small>{item.location}</Small>
         </Info>
         <Description>
-          <Paragraph>Lorem ipsum</Paragraph>
+          <Paragraph>{item.text}</Paragraph>
         </Description>
         <Point even={even} />
       </TimelineItem>
