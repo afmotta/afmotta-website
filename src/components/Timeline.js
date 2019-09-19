@@ -15,11 +15,13 @@ const Wrapper = styled.div`
 `
 
 const TimelineItem = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  margin-right: -3.5rem;
   position: relative;
   padding-bottom: 2.7125rem;
+  @media (min-width: 1200px) {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: -3.5rem;
+  }
 `
 
 const Info = styled.div`
@@ -32,7 +34,9 @@ const Role = styled(Paragraph)`
 `
 
 const Description = styled.div`
-  flex: 50%;
+  @media (min-width: 1200px) {
+    flex: 50%;
+  }
 `
 
 const Point = styled.div`

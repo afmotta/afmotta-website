@@ -13,8 +13,8 @@ export default ({
       odd: background,
     },
     column: {
-      even: darken(0.021, background),
-      odd: darken(0.015, background),
+      even: darken(0.03, background),
+      odd: darken(0.02, background),
     },
   },
 })

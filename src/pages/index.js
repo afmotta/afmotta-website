@@ -10,13 +10,14 @@ import Summary from "../components/Summary"
 import WithEven from "../components/WithEven"
 import getTheme from "../theme"
 
-const GlobalStyle = createGlobalStyle`
+const getGlobalStyle = bgColor => createGlobalStyle`
   * {
-    font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
     line-height: 1.75;
   }
 
   body {
+    background-color: ${bgColor};
     margin: 0;
   }
 `
@@ -33,6 +34,7 @@ export default ({ data }) => {
     summary,
     techs,
   } = data.dataJson
+  const GlobalStyle = getGlobalStyle(colors.background)
   return (
     <React.Fragment>
       <GlobalStyle />

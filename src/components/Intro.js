@@ -13,7 +13,10 @@ const Wrapper = styled.div`
 `
 
 const AvatarWrapper = styled.div`
-  align-items: flex-end;
+  @media (min-width: 900px) {
+    align-items: flex-end;
+  }
+  align-items: center;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -24,7 +27,7 @@ const AvatarWrapper = styled.div`
 const FirstName = styled.div`
   text-transform: capitalize;
   font-weight: 300;
-  line-height: 1rem;
+  line-height: 3.5rem;
 `
 
 const LastName = styled.div`
