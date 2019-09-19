@@ -30,13 +30,17 @@ const Info = styled.div`
 `
 
 const Role = styled(Paragraph)`
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.brand};
 `
 
 const Description = styled.div`
   @media (min-width: 1200px) {
     flex: 50%;
   }
+`
+
+const ItemTitle = styled(Title)`
+  font-weight: bolder;
 `
 
 const Point = styled.div`
@@ -57,7 +61,7 @@ export default ({ even, items, ...props }) => (
       <TimelineItem {...item}>
         <Info>
           <Small>{item.period}</Small>
-          <Title>{item.company}</Title>
+          <ItemTitle>{item.company}</ItemTitle>
           <Role>{item.title}</Role>
           <Small>{item.location}</Small>
         </Info>

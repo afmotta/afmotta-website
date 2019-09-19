@@ -1,7 +1,7 @@
 import { darken } from "polished"
 
 export default ({
-  text = "#a4a5a6",
+  text = "#ffffff",
   brand = "#2ca24c",
   background = "#2b2c2c",
 } = {}) => ({

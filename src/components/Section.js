@@ -43,11 +43,18 @@ const Wrapper = styled.div`
   }
 `
 
+const SectionTitle = styled(Title)`
+  text-transform: uppercase;
+  letter-spacing: .15rem;
+  font-weight: lighter;
+  opacity: .5;
+`
+
 const getColumnNode = props => {
   if (props.columnNode) {
     return props.columnNode
   }
-  return <Title level={2}>{props.title || ""}</Title>
+  return <SectionTitle level={2}>{props.title || ""}</SectionTitle>
 }
 
 const Section = ({ children, even, ...props }) => (
