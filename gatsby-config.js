@@ -11,6 +11,7 @@ module.exports = {
     description: "My personal website",
   },
   plugins: [
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-styled-components",
     "gatsby-transformer-json",
     {

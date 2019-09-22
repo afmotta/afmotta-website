@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { createGlobalStyle, ThemeProvider } from "styled-components"
+import { Helmet } from "react-helmet"
 import Contacts from "../components/Contacts"
 import TimelineSection from "../components/TimelineSection"
 import Intro from "../components/Intro"
@@ -19,6 +20,7 @@ const getGlobalStyle = bgColor => createGlobalStyle`
   body {
     background-color: ${bgColor};
     margin: 0;
+    overflow-x: hidden;
   }
 `
 
@@ -37,6 +39,7 @@ export default ({ data }) => {
   const GlobalStyle = getGlobalStyle(colors.background)
   return (
     <React.Fragment>
+      <Helmet title={general.title} />
       <GlobalStyle />
       <ThemeProvider
         theme={getTheme({
