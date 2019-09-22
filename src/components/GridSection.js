@@ -1,12 +1,11 @@
 import React from "react"
-import Grid from './Grid'
+import Grid from "./Grid"
 import Section from "./Section"
 
-export default ({ title, items, ...props}) => {
-  console.log(title)
-  console.log(items)
+export default ({ title, items, ...props }) => {
   return (
-  <Section title={title} {...props}>
-    <Grid items={items} />
-  </Section>
-)}
+    <Section title={title} {...props}>
+      <Grid items={items} />
+    </Section>
+  )
+}
