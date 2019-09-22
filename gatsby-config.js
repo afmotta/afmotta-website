@@ -6,15 +6,17 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Title from siteMetadata`,
+    title: "Alberto Francesco Motta",
+    siteUrl: "https://motta.dev",
+    description: "My personal website",
   },
   plugins: [
-    `gatsby-plugin-styled-components`,
-    `gatsby-transformer-json`,
+    "gatsby-plugin-styled-components",
+    "gatsby-transformer-json",
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        path: `./src/data/`,
+        path: "./src/data/",
       },
     },
   ],
