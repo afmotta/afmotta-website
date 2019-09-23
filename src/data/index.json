@@ -13,8 +13,14 @@
   },
   "summary": "I'm a passionate software developer with an aptitude for leadership. I have a solid experience in designing and developing products as well as leading teams towards the accomplishment of the mission.",
   "experties": [
-    { "title": "leadership", "text": "Lorem ipsum" },
-    { "title": "software development", "text": "Lorem ipsum" }
+    {
+      "title": "leadership",
+      "text": "I've built teams from ground up, managed them and lead them to success."
+    },
+    {
+      "title": "software development",
+      "text": "I've experience in designing and implementing complex products."
+    }
   ],
   "skills": [
     { "title": "Agile software development" },
